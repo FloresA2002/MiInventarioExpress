@@ -1,0 +1,40 @@
+{{#if errores}}
+  <div class="alert alert-danger">
+    <ul>
+      {{#each errores}}
+        <li>{{this.msg}}</li>
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
+<h1>{{#if producto}}Editar{{else}}Crear{{/if}} Producto</h1>
+<form 
+  action="{{#if producto._id}}/productos/editar/{{producto._id}}{{else}}/productos/crear{{/if}}" 
+  method="POST" 
+  enctype="multipart/form-data"
+>
+
+  <input 
+    name="nombre" 
+    class="form-control mb-2" 
+    placeholder="Nombre"
+    value="{{producto.nombre}}"
+  >
+
+  <input 
+    name="precio" 
+    class="form-control mb-2" 
+    placeholder="Precio"
+    value="{{producto.precio}}"
+  >
+
+  <textarea 
+    name="descripcion" 
+    class="form-control mb-2" 
+    placeholder="Descripción"
+  >{{producto.descripcion}}</textarea>
+
+  <input type="file" name="imagen" class="form-control mb-2">
+
+  <button class="btn btn-success">Guardar</button>
+</form>

@@ -1,0 +1,32 @@
+<h1 class="mb-4">Productos</h1>
+
+<a href="/productos/crear" class="btn btn-primary mb-3">Nuevo Producto</a>
+
+<div class="row">
+  {{#each productos}}
+    <div class="col-md-4">
+      <div class="card mb-3">
+
+        {{#if imagen}}
+          <img src="/uploads/{{imagen}}" class="card-img-top" />
+        {{/if}}
+
+        <div class="card-body">
+          <h5>{{nombre}}</h5>
+          <p>${{precio}}</p>
+          <p>{{descripcion}}</p>
+
+          <a href="/productos/editar/{{_id}}" class="btn btn-warning">Editar</a>
+          <a 
+  href="/productos/eliminar/{{_id}}" 
+  class="btn btn-danger"
+  onclick="return confirm('¿Seguro que deseas eliminar este producto?')"
+>
+  Eliminar
+</a>
+        </div>
+
+      </div>
+    </div>
+  {{/each}}
+</div>
