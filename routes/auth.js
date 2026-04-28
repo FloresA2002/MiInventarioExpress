@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 
 // 🔹 LOGIN FORM
 router.get("/login", (req, res) => {
-  res.render("auth/login");
+  res.render("auth/auth");
 });
 
 // 🔹 LOGIN
@@ -51,7 +51,7 @@ router.post(
 
 // 🔹 REGISTRO FORM
 router.get("/registro", (req, res) => {
-  res.render("auth/registro");
+  res.render("auth/auth");
 });
 
 // 🔹 REGISTRO

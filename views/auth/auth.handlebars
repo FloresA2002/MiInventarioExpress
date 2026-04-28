@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/auth.css">
+<div class="auth-container">
+<div class="main">  	
+  <input type="checkbox" id="chk" aria-hidden="true">
+
+  <!-- REGISTRO -->
+  <div class="signup">
+    <form method="POST" action="/auth/registro">
+      <label for="chk">Registrarse</label>
+
+      {{#if errores}}
+        <div class="error-box">
+          {{#each errores}}
+            <p>{{this.msg}}</p>
+          {{/each}}
+        </div>
+      {{/if}}
+
+      <input type="text" name="username" placeholder="Usuario" required>
+      <input type="password" name="password" placeholder="Contraseña" required>
+
+      <button>Registrarse</button>
+    </form>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="login">
+    <form method="POST" action="/auth/login">
+      <label for="chk">Login</label>
+
+      {{#if errores}}
+        <div class="error-box">
+          {{#each errores}}
+            <p>{{this.msg}}</p>
+          {{/each}}
+        </div>
+      {{/if}}
+
+      <input type="text" name="username" placeholder="Usuario" required>
+      <input type="password" name="password" placeholder="Contraseña" required>
+
+      <button>Ingresar</button>
+    </form>
+  </div>
+  </div>
+</div>
