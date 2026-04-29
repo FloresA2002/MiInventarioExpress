@@ -58,7 +58,7 @@ MiInventarioExpress/
 
 1. Clonar el repositorio:
 
-git clone https://github.com/TU-USUARIO/MiInventarioExpress.git
+git clone https://github.com/FloresA2002/MiInventarioExpress
 
 
 2. Entrar al proyecto:
