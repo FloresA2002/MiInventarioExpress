@@ -125,12 +125,6 @@ http://localhost:3000
 - Verificación en consola ✔
 - Chat en tiempo real ✔
 
----
-
-## 📸 Capturas (Opcional)
-Puedes agregar imágenes aquí si deseas mejorar la presentación.
-
----
 
 ## 📌 Notas
 - Las imágenes subidas se almacenan en la carpeta `/uploads`
